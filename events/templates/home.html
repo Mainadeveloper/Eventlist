@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to EventMaster</title>
+    <style>
+        /* General Page Styling */
+        body {
+            background-color: #34f1f1; /* Updated background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Title Styling */
+        h1 {
+            text-align: center;
+            margin-top: 50px; /* Adjusted margin for better placement */
+            font-size: 48px; /* Larger and bolder font size */
+            font-weight: 900; /* Make the font bold */
+            color: #2d3748; /* Dark gray for contrast */
+            font-family: 'Montserrat', sans-serif; /* Attractive font */
+        }
+
+        /* Logout Button Styling */
+        .logout-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logout-button:hover {
+            background-color: #ff3b3b;
+        }
+
+        /* Login Button Styling */
+        .login-button {
+            display: block;
+            margin: 200px auto; /* Center the button vertically and horizontally */
+            width: 250px; /* Make the button wider */
+            padding: 20px; /* Add more padding for a larger button */
+            background-color: black;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px; /* Larger font for the button */
+            border-radius: 10px; /* More rounded corners */
+            font-weight: bold; /* Bold text */
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #333;
+        }
+    </style>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Welcome to EventMaster</h1>
+    <a href="{% url 'login' %}" class="login-button">Login</a>
+    <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+</body>
+</html>
+
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        /* General Page Styling */
+        body {
+            background-color: #34f1f1; /* Background color */
+            font-family: Arial, sans-serif; /* Font for all text */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full page height */
+        }
+
+        /* Centering Content */
+        .login-container {
+            text-align: center; /* Center all text */
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Input Fields and Form */
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Login Button */
+        button {
+            background-color: black; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #333; /* Highlight when hovered */
+        }
+
+        /* Registration Link */
+        p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
+    </div>
+</body>
+</html>
+

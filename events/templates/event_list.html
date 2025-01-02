@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event List</title>
+    <style>
+        /* General Page Styling */
+        body {
+            background-color: #34f1f1; /* Funky website background color */
+            font-family: Arial, sans-serif; /* Font for all text */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Page Title */
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Event List Styling */
+        ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+        }
+
+        li {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        li h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        li p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Create Event Button */
+        a {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            text-align: center;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: red; /* Change to red when hovered */
+        }
+    </style>
+</head>
+<body>
+    <h1>Upcoming Events</h1>
+    <ul>
+        {% for event in events %}
+            <li>
+                <h2>{{ event.name }}</h2>
+                <p>{{ event.description }}</p>
+                <p><strong>Date:</strong> {{ event.date }}</p>
+            </li>
+        {% empty %}
+            <p>No upcoming events.</p>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'create_event' %}">Create a New Event</a>
+</body>
+</html>

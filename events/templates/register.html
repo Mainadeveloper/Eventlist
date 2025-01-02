@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        /* General Page Styling */
+        body {
+            background-color: #34f1f1; /* Background color */
+            font-family: Arial, sans-serif; /* Font for all text */
+            margin: 0;
+            height: 100vh; /* Full-page height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Form Container */
+        .form-container {
+            background: white;
+            padding: 40px; /* Increased padding */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 500px; /* Increased width for better spacing */
+            text-align: center; /* Center-align all text inside */
+        }
+
+        /* Title Styling */
+        h1 {
+            margin-bottom: 30px; /* Add more space below the title */
+            font-size: 28px; /* Slightly larger title font */
+            color: #333;
+            font-family: Arial, sans-serif; /* Ensure font consistency */
+        }
+
+        /* Form Labels */
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+            font-family: Arial, sans-serif; /* Ensure font consistency */
+        }
+
+        /* Input Fields */
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Ensure font consistency */
+        }
+
+        /* Password Guidelines */
+        ul {
+            text-align: left;
+            margin-top: -10px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            font-size: 12px;
+            color: #555;
+            font-family: Arial, sans-serif; /* Ensure font consistency */
+        }
+
+        /* Register Button */
+        button {
+            background-color: black; /* Button color */
+            color: white;
+            border: none;
+            padding: 12px 25px; /* Adjusted padding for larger button */
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif; /* Ensure font consistency */
+        }
+
+        button:hover {
+            background-color: red; /* Highlight color */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Register</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
+
