@@ -1,5 +1,5 @@
 # Eventlist
-# FAITH MAINA-ENE221-0225/2020 and IFRAH FARAH-ENE221-0111/2020
+# Faith Maina-ENE221-0225/2020 and Ifrah Farah-ENE221-0111/2020
 # Event Management System
 This Event Management System is a web-based application developed using Django, designed to streamline the creation, management, and participation in events.
 
